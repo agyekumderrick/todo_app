@@ -1,20 +1,21 @@
-tasks = []
-# display menu
-def display_menu():
-    print("1.Add task")
-    print("2.View task")
-    print("3.Update task")
-    print("4.Delete task")
-    print("5.Exit")
-
-
-# add tasks function
-def Add_task():
-    user_task = input("Kindly enter a task:\n")
-    tasks.append(user_task)
-    print("Kindly enter a task")
-
-
-# exit function
-def exit_program():
-    exit(1)
+# import our program module
+from program import *
+print("************ Welometo my to-do application ************")
+# get user choice
+while True:
+    display_menu()
+    # accept user option
+    user_option = int(input("kindly choose from either of the following options:\n"
+                            "Enter here => "))
+    if user_option == 1:
+        add_task()
+    elif user_option == 2:
+        view_task()
+    elif user_option == 3:
+        update_task()
+    elif user_option == 4:
+        delete_task()
+    elif user_option == 5:
+        exit()
+    else:
+        print("Invalid option, Kindly choose between 1 - 5")
